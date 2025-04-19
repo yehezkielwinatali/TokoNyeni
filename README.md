@@ -4,7 +4,7 @@
 
 **Team members:**
 
-| Student Id |           Name            |
+| Student ID |           Name            |
 | :--------- | :-----------------------: |
 | 22013084   | Winatali Yehezkiel Angelo |
 | 22013086   |     Vritztanto Joshua     |
