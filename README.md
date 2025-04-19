@@ -1,6 +1,6 @@
 # Toko Nyeni Website Project
 
-### Team Information
+## Team Information
 
 **Team members:**
 
