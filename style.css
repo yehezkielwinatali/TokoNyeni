@@ -121,7 +121,18 @@ body {
   bottom: -4px;
   left: 20px;
 }
+
+#mobile {
+  display: none;
+  align-items: center;
+}
+
+#close {
+  display: none;
+}
+
 /*HomePage*/
+
 #hero {
   background-image: url("img/madison.jpg");
   height: 100vh;
@@ -293,6 +304,7 @@ body {
 
 #sm-banner {
   display: flex;
+  flex-direction: column;
   gap: 41px;
 }
 
@@ -676,6 +688,3 @@ footer .copyright {
   /* test
   lalaa */
 }
-
-
-
