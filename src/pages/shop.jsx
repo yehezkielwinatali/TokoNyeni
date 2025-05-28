@@ -1,388 +1,237 @@
-// <!DOCTYPE html>
-// <html lang="en">
+import { Link } from "react-router-dom";
+import "../styles/shop.css";
 
-//     <head>
-//         <meta charset="UTF-8">
-//         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-//         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//         <title>Tech2etc Ecommerce Tutorial</title>
-//         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-//         <link
-//       rel="stylesheet"
-//       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-//     />
-//     <link rel="preconnect" href="https://fonts.googleapis.com" />
-//     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-//     <link
-//       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@100..900&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-//       rel="stylesheet"
-//     />
-//     <link rel="preconnect" href="https://fonts.googleapis.com" />
-//     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-//     <link
-//       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@100..900&family=Pacifico&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-//       rel="stylesheet"
-//     />
-//         <link rel="stylesheet" href="shop.css">
-//     </head>
+function Shop() {
+  return (
+    <>
+      <section id="header">
+        <Link to="#" className="logo">
+          <img src="/img/logo.png" alt="logo" style={{ width: "90px" }} />
+        </Link>
+        <ul id="navbar">
+          <li>
+            <Link to="/" className="active">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/shop">Shop</Link>
+          </li>
+          <li>
+            <Link to="/blog">Blog</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+          <li>
+            <Link to="/cart" id="cart-icon">
+              <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+            </Link>
+          </li>
+        </ul>
+      </section>
 
-//     <body>
-//         <section id="header">
-//             <a href="#" class="logo"
-//               ><img src="img/logo.png" alt="logo" style="width: 90px"
-//             /></a>
-//             <ul id="navbar">
-//               <li><a href="index.html" class="active">Home</a></li>
-//               <li><a href="shop.html">Shop</a></li>
-//               <li><a href="blog.html">Blog</a></li>
-//               <li><a href="about.html">About</a></li>
-//               <li><a href="contact.html">Contact</a></li>
-//               <li>
-//                 <a href="cart.html" id="cart-icon"
-//                   ><i class="fa fa-shopping-cart" aria-hidden="true"></i>
-//                 </a>
-//               </li>
-//             </ul>
-//           </section>
-       
-//           <section>
-//             <div class="pro-container">
-//               <div class="pro">
-//                 <img src="img/products/f1.jpg" alt="" />
-//                 <div class="desc">
-//                   <span>Adinda</span>
-//                   <h5>Baju Cah Yapping</h5>
-//                   <div class="star">
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                   </div>
-//                   <h4>$78</h4>
-//                 </div>
-//                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-//               </div>
-//               <div class="pro">
-//                 <img src="img/products/f2.jpg" alt="" />
-//                 <div class="desc">
-//                   <span>Adinda</span>
-//                   <h5>Baju Mbois</h5>
-//                   <div class="star">
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                   </div>
-//                   <h4>$63</h4>
-//                 </div>
-//                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-//               </div>
-//               <div class="pro">
-//                 <img src="img/products/f3.jpg" alt="" />
-//                 <div class="desc">
-//                   <span>Adios</span>
-//                   <h5>Baju Bali Sangar</h5>
-//                   <div class="star">
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                   </div>
-//                   <h4>$95</h4>
-//                 </div>
-//                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-//               </div>
-//               <div class="pro">
-//                 <img src="img/products/f4.jpg" alt="" />
-//                 <div class="desc">
-//                   <span>Adinda</span>
-//                   <h5>Baju Kembang Desa</h5>
-//                   <div class="star">
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                   </div>
-//                   <h4>$105</h4>
-//                 </div>
-//                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-//               </div>
-//               <div class="pro">
-//                 <img src="img/products/f5.jpg" alt="" />
-//                 <div class="desc">
-//                   <span>Naiki</span>
-//                   <h5>Baju Cah Ganteng</h5>
-//                   <div class="star">
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                   </div>
-//                   <h4>$88</h4>
-//                 </div>
-//                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-//               </div>
-//               <div class="pro">
-//                 <img src="img/products/f6.jpg" alt="" />
-//                 <div class="desc">
-//                   <span>M&H</span>
-//                   <h5>Outer Penjoget Handal</h5>
-//                   <div class="star">
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                   </div>
-//                   <h4>$59</h4>
-//                 </div>
-//                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-//               </div>
-//               <div class="pro">
-//                 <img src="img/products/f7.jpg" alt="" />
-//                 <div class="desc">
-//                   <span>LuluOrange</span>
-//                   <h5>Celana Nyeni Berkelas</h5>
-//                   <div class="star">
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                   </div>
-//                   <h4>$173</h4>
-//                 </div>
-//                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-//               </div>
-//               <div class="pro">
-//                 <img src="img/products/f8.jpg" alt="" />
-//                 <div class="desc">
-//                   <span>Trasher</span>
-//                   <h5>Baju Slay</h5>
-//                   <div class="star">
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                     <i class="fas fa-star"></i>
-//                   </div>
-//                   <h4>$52</h4>
-//                 </div>
-//                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-//               </div>
-//             </div>
-//             <div class="pro-container">
-//                 <div class="pro">
-//                   <img src="img/products/n1.jpg" alt="" />
-//                   <div class="desc">
-//                     <span>Adinda</span>
-//                     <h5>Baju Cah Yapping</h5>
-//                     <div class="star">
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                     </div>
-//                     <h4>$78</h4>
-//                   </div>
-//                   <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-//                 </div>
-//                 <div class="pro">
-//                   <img src="img/products/n2.jpg" alt="" />
-//                   <div class="desc">
-//                     <span>Adinda</span>
-//                     <h5>Baju Mbois</h5>
-//                     <div class="star">
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                     </div>
-//                     <h4>$63</h4>
-//                   </div>
-//                   <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-//                 </div>
-//                 <div class="pro">
-//                   <img src="img/products/n3.jpg" alt="" />
-//                   <div class="desc">
-//                     <span>Adios</span>
-//                     <h5>Kemeja Polos Anti Mbolos</h5>
-//                     <div class="star">
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                     </div>
-//                     <h4>$95</h4>
-//                   </div>
-//                   <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-//                 </div>
-//                 <div class="pro">
-//                   <img src="img/products/n4.jpg" alt="" />
-//                   <div class="desc">
-//                     <span>Adinda</span>
-//                     <h5>Kemeja Kembang Kembangan</h5>
-//                     <div class="star">
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                     </div>
-//                     <h4>$105</h4>
-//                   </div>
-//                   <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-//                 </div>
-//                 <div class="pro">
-//                   <img src="img/products/n5.jpg" alt="" />
-//                   <div class="desc">
-//                     <span>Naiki</span>
-//                     <h5>Kemeja Partai</h5>
-//                     <div class="star">
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                     </div>
-//                     <h4>$88</h4>
-//                   </div>
-//                   <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-//                 </div>
-//                 <div class="pro">
-//                   <img src="img/products/n6.jpg" alt="" />
-//                   <div class="desc">
-//                     <span>M&H</span>
-//                     <h5>Celana Penari Sangar</h5>
-//                     <div class="star">
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                     </div>
-//                     <h4>$59</h4>
-//                   </div>
-//                   <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-//                 </div>
-//                 <div class="pro">
-//                   <img src="img/products/n7.jpg" alt="" />
-//                   <div class="desc">
-//                     <span>LuluOrange</span>
-//                     <h5>Kemeja Nyeni Berkelas</h5>
-//                     <div class="star">
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                     </div>
-//                     <h4>$173</h4>
-//                   </div>
-//                   <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-//                 </div>
-//                 <div class="pro">
-//                   <img src="img/products/n8.jpg" alt="" />
-//                   <div class="desc">
-//                     <span>Trasher</span>
-//                     <h5>Kemeja Joh</h5>
-//                     <div class="star">
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                       <i class="fas fa-star"></i>
-//                     </div>
-//                     <h4>$52</h4>
-//                   </div>
-//                   <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-//                 </div>
-//               </div>
-        
-    
-    
-    
-    
-    
-    
-    
-    
-//     <!-- ok -->
-    
-    
-    
-//     </section>
-//         <section id="newsletter" class="section-p1 section-m1">
-//             <div class="newstext">
-//               <h4>Sign Up For Newsletters</h4>
-//               <p>
-//                 Get E-Mail Updates About Our Latest Update And
-//                 <span>Special Offers</span>
-//               </p>
-//             </div>
-//             <div class="form">
-//               <input type="text" placeholder="Your E-Mail Address" />
-//               <button class="normal">Sign Up</button>
-//             </div>
-//           </section>
+      <section>
+        <div className="pro-container">
+          {[...Array(8)].map((_, i) => (
+            <div className="pro" key={`f${i}`}>
+              <img src={`/img/products/f${i + 1}.jpg`} alt="" />
+              <div className="desc">
+                <span>
+                  {
+                    [
+                      "Adinda",
+                      "Adinda",
+                      "Adios",
+                      "Adinda",
+                      "Naiki",
+                      "M&H",
+                      "LuluOrange",
+                      "Trasher",
+                    ][i]
+                  }
+                </span>
+                <h5>
+                  {
+                    [
+                      "Baju Cah Yapping",
+                      "Baju Mbois",
+                      "Baju Bali Sangar",
+                      "Baju Kembang Desa",
+                      "Baju Cah Ganteng",
+                      "Outer Penjoget Handal",
+                      "Celana Nyeni Berkelas",
+                      "Baju Slay",
+                    ][i]
+                  }
+                </h5>
+                <div className="star">
+                  {"★★★★★".split("").map((_, s) => (
+                    <i key={s} className="fas fa-star"></i>
+                  ))}
+                </div>
+                <h4>
+                  {
+                    [`$78`, `$63`, `$95`, `$105`, `$88`, `$59`, `$173`, `$52`][
+                      i
+                    ]
+                  }
+                </h4>
+              </div>
+              <a href="#">
+                <i className="fal fa-shopping-cart cart"></i>
+              </a>
+            </div>
+          ))}
+        </div>
 
-//             <footer class="section-p1">
-//                 <div class="col">
-//                 <img class="logo" style="width: 150px" src="img/logo.png" alt="" />
-//                 <h4>Contact</h4>
-//                 <p><strong>Address: </strong> Graha Family Block O/211</p>
-//                 <p><strong>Phone: </strong> +82 9242 3343 / +62 8345 2423</p>
-//                 <p><strong>Hours: </strong>09:00 - 21:00, Monday - Sunday</p>
-//                 <div class="follow">
-//                     <h4>Follow us</h4>
-//                     <div class="icon">
-//                     <i class="fab fa-facebook"></i>
-//                     <i class="fab fa-twitter"></i>
-//                     <i class="fab fa-instagram"></i>
-//                     <i class="fab fa-pinterest"></i>
-//                     <i class="fab fa-youtube"></i>
-//                     </div>
-//                 </div>
-//             </div>
-//             <div class="col">
-//               <h4>About</h4>
-//               <a href="#">About us</a>
-//               <a href="#">Delivery Information</a>
-//               <a href="#">Privacy Policy</a>
-//               <a href="#">Terms & Conditions</a>
-//               <a href="#">Contact us</a>
-//             </div>
-//             <div class="col">
-//               <h4>My Account</h4>
-//               <a href="#">Sign In</a>
-//               <a href="#">View Chart</a>
-//               <a href="#">My Wishlist</a>
-//               <a href="#">Track My Orders</a>
-//               <a href="#">Help</a>
-//             </div>
-//             <div class="col install">
-//               <h4>Install App</h4>
-//               <p>From App Store / Google Play</p>
-//               <div class="row">
-//                 <img src="img/pay/app.jpg" alt="" />
-//                 <img src="img/pay/play.jpg" alt="" />
-//               </div>
-//               <p>Secured Payment Gateways</p>
-//               <img src="img/pay/pay.png" alt="" />
-//             </div>
-//             <div class="copyright">
-//               <p>© 2025. Wong Liyo Ngerti Opo Corporation</p>
-//             </div>
-//           </footer>
-//          <script src="script.js"></script>
-//     </body>
+        <div className="pro-container">
+          {[...Array(8)].map((_, i) => (
+            <div className="pro" key={`n${i}`}>
+              <img src={`/img/products/n${i + 1}.jpg`} alt="" />
+              <div className="desc">
+                <span>
+                  {
+                    [
+                      "Adinda",
+                      "Adinda",
+                      "Adios",
+                      "Adinda",
+                      "Naiki",
+                      "M&H",
+                      "LuluOrange",
+                      "Trasher",
+                    ][i]
+                  }
+                </span>
+                <h5>
+                  {
+                    [
+                      "Baju Cah Yapping",
+                      "Baju Mbois",
+                      "Kemeja Polos Anti Mbolos",
+                      "Kemeja Kembang Kembangan",
+                      "Kemeja Partai",
+                      "Celana Penari Sangar",
+                      "Kemeja Nyeni Berkelas",
+                      "Kemeja Joh",
+                    ][i]
+                  }
+                </h5>
+                <div className="star">
+                  {"★★★★★".split("").map((_, s) => (
+                    <i key={s} className="fas fa-star"></i>
+                  ))}
+                </div>
+                <h4>
+                  {
+                    [`$78`, `$63`, `$95`, `$105`, `$88`, `$59`, `$173`, `$52`][
+                      i
+                    ]
+                  }
+                </h4>
+              </div>
+              <a href="#">
+                <i className="fal fa-shopping-cart cart"></i>
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
 
-// </html>
+      <section id="newsletter" className="section-p1 section-m1">
+        <div className="newstext">
+          <h4>Sign Up For Newsletters</h4>
+          <p>
+            Get E-Mail Updates About Our Latest Update And
+            <span> Special Offers</span>
+          </p>
+        </div>
+        <div className="form">
+          <input type="text" placeholder="Your E-Mail Address" />
+          <button className="normal">Sign Up</button>
+        </div>
+      </section>
+
+      <footer className="section-p1">
+        <div className="col">
+          <img
+            className="logo"
+            style={{ width: "150px" }}
+            src="/img/logo.png"
+            alt=""
+          />
+          <h4>Contact</h4>
+          <p>
+            <strong>Address: </strong> Graha Family Block O/211
+          </p>
+          <p>
+            <strong>Phone: </strong> +82 9242 3343 / +62 8345 2423
+          </p>
+          <p>
+            <strong>Hours: </strong>09:00 - 21:00, Monday - Sunday
+          </p>
+          <div className="follow">
+            <h4>Follow us</h4>
+            <div className="icon">
+              {["facebook", "twitter", "instagram", "pinterest", "youtube"].map(
+                (net, i) => (
+                  <i key={i} className={`fab fa-${net}`}></i>
+                )
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className="col">
+          <h4>About</h4>
+          {[
+            "About us",
+            "Delivery Information",
+            "Privacy Policy",
+            "Terms & Conditions",
+            "Contact us",
+          ].map((item, i) => (
+            <a key={i} href="#">
+              {item}
+            </a>
+          ))}
+        </div>
+
+        <div className="col">
+          <h4>My Account</h4>
+          {[
+            "Sign In",
+            "View Chart",
+            "My Wishlist",
+            "Track My Orders",
+            "Help",
+          ].map((item, i) => (
+            <a key={i} href="#">
+              {item}
+            </a>
+          ))}
+        </div>
+
+        <div className="col install">
+          <h4>Install App</h4>
+          <p>From App Store / Google Play</p>
+          <div className="row">
+            <img src="/img/pay/app.jpg" alt="" />
+            <img src="/img/pay/play.jpg" alt="" />
+          </div>
+          <p>Secured Payment Gateways</p>
+          <img src="/img/pay/pay.png" alt="" />
+        </div>
+        <div className="copyright">
+          <p>© 2025. Wong Liyo Ngerti Opo Corporation</p>
+        </div>
+      </footer>
+    </>
+  );
+}
+
+export default Shop;
