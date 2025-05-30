@@ -15,6 +15,10 @@
   #blog {
     padding: 150px 150px 0 150px;
   }
+
+  #blog.secondary {
+    padding-top: 75px;
+}
   
   #blog h1 {
     z-index: 1;
@@ -50,21 +54,24 @@
   
   #blog .blog-details a {
     text-decoration: none;
-    font-size: 11px;
+    font-size: 20px;
     color: #000;
     font-weight: 700;
     position: relative;
-    transition: 3s;
+    transition: .3s;
   }
   
   #blog .blog-details a::after {
     content: "";
-    width: 50px;
-    height: 1px;
+    width: 100px;
+    height: 2px;
     background-color: #000;
     position: absolute;
-    top: 4px;
-    right: -60px;
+    top: 50%;
+    left: 110%;
+    transform: translateY(-50%);
+    margin-top: 0;
+    transition: .3s;
   }
   
   #blog .blog-details a:hover {
@@ -83,6 +90,21 @@
     font-weight: 700;
     color: #c9cbce;
     z-index: 2;
+  }
+
+  #pagination {
+    text-align: center;
+  }
+  
+  #pagination a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    background-color: #088178;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 4px;
+    font-weight: 600;
   }
   
   @media (max-width: 477px) {
