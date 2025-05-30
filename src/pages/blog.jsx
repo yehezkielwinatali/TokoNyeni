@@ -1,7 +1,17 @@
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 import "../styles/blog.css";
 
 function Blog() {
+  const navbarRef = useRef(null);
+
+  const openNavbar = () => {
+    navbarRef.current.classList.add("active");
+  };
+  const closeNavbar = () => {
+    navbarRef.current.classList.remove("active");
+  };
+
   return (
     <>
       <section id="header">
@@ -9,7 +19,7 @@ function Blog() {
           <img src="/img/logo.png" alt="logo" style={{ width: "90px" }} />
         </Link>
         <div>
-          <ul id="navbar">
+          <ul id="navbar" ref={navbarRef}>
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -32,7 +42,7 @@ function Blog() {
                 <i className="fa fa-shopping-cart" aria-hidden="true"></i>
               </Link>
             </li>
-            <a href="#" id="close">
+            <a href="#" id="close" onClick={closeNavbar}>
               <i className="far fa-times"></i>
             </a>
           </ul>
@@ -41,7 +51,7 @@ function Blog() {
           <Link to="/cart" id="cart-icon">
             <i className="fa fa-shopping-cart" aria-hidden="true"></i>
           </Link>
-          <i id="bar" className="fas fa-outdent"></i>
+          <i id="bar" className="fas fa-outdent" onClick={openNavbar}></i>
         </div>
       </section>
 
@@ -64,6 +74,23 @@ function Blog() {
             <a href="#">CONTINUE READING</a>
           </div>
           <h1>13/01</h1>
+        </div>
+      </section>
+
+      <section id="blog" className="secondary">
+        <div className="blog-box">
+          <div className="blog-img">
+            <img src="/img/blog/b2.jpg" alt="" />
+          </div>
+          <div className="blog-details">
+            <h4>The Cotton-Jersey Zip-Up Hoodie</h4>
+            <p>
+              Kickstarter man braid godard coloring book. Raclette waistcoat
+              selfies yr wolf chartreuse hexagon irony, godard…
+            </p>
+            <a href="#">CONTINUE READING</a>
+          </div>
+          <h1>13/02</h1>
         </div>
       </section>
 
