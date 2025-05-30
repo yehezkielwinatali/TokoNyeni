@@ -10,12 +10,12 @@ function Shop() {
         </Link>
         <ul id="navbar">
           <li>
-            <Link to="/" className="active">
-              Home
-            </Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/shop">Shop</Link>
+            <Link to="/shop" className="active">
+              Shop
+            </Link>
           </li>
           <li>
             <Link to="/blog">Blog</Link>
