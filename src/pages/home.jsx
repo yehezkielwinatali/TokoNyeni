@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import "../styles/home.css";
-import "../styles/media.css";
 
 function Home() {
   const navbarRef = useRef(null);
