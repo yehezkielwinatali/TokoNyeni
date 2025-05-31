@@ -15,9 +15,9 @@ function Home() {
   return (
     <>
       <section id="header">
-        <Link to="/" className="logo">
+        <a href="#" className="logo">
           <img src="/img/logo.png" alt="logo" style={{ width: "90px" }} />
-        </Link>
+        </a>
         <div>
           <ul id="navbar" ref={navbarRef}>
             <li>
@@ -257,12 +257,14 @@ function Home() {
 
       <footer className="section-p1">
         <div className="col">
-          <img
-            className="logo"
-            style={{ width: "150px" }}
-            src="/img/logo.png"
-            alt=""
-          />
+          <a href="#">
+            <img
+              className="logo"
+              style={{ width: "150px" }}
+              src="/img/logo.png"
+              alt=""
+            />
+          </a>
           <h4>Contact</h4>
           <p>
             <strong>Address: </strong> Sejong University

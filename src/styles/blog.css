@@ -1,130 +1,144 @@
 #page-header.blog-header {
-    background-image: url("img/banner/b19.jpg");
-    height: 30.1vh;
+  background-image: url("img/banner/b19.jpg");
+  height: 30.1vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#page-header.blog-header h2,
+#page-header.blog-header p {
+  color: white;
+}
+
+#blog {
+  padding: 150px 150px 0 150px;
+}
+
+#blog h1 {
+  z-index: 1;
+}
+
+#blog .blog-box,
+#blog .blog-box-last {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding-bottom: 130px;
+}
+
+#blog .blog-box-last {
+  padding-bottom: 40px;
+}
+
+#blog .blog-img {
+  width: 50%;
+  margin-right: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+#blog img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+#blog .blog-details {
+  width: 50%;
+}
+
+#blog .blog-details a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+  font-weight: 700;
+  position: relative;
+  transition: 0.3s;
+}
+
+#blog .blog-details a::after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  transform: translateY(-50%);
+  margin-top: 0;
+  transition: 0.3s;
+}
+
+#blog .blog-details a:hover {
+  color: #088178;
+}
+
+#blog .blog-details a:hover:after {
+  background-color: #008178;
+}
+
+#blog .blog-box h1,
+#blog .blog-box-last h1 {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  font-size: 70px;
+  font-weight: 700;
+  color: #c9cbce;
+  z-index: 2;
+}
+
+#pagination {
+  text-align: center;
+}
+
+#pagination a {
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  background-color: #088178;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+#pagination .active-page {
+  font-size: 18px;
+  color: white;
+  background-color: #088178;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (max-width: 477px) {
+  #blog {
+    padding: 100px 20px 0 20px;
+  }
+
+  #blog .blog-box,
+  #blog .blog-box-last {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #page-header.blog-header h2,
-  #page-header.blog-header p {
-    color: white;
-  }
-  
-  #blog {
-    padding: 150px 150px 0 150px;
+    align-items: flex-start;
   }
 
-  #blog.secondary {
-    padding-top: 75px;
-}
-  
-  #blog h1 {
-    z-index: 1;
-}
-
-  #blog .blog-box {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    padding-bottom: 90px;
-  }
-  
   #blog .blog-img {
-    width: 50%;
-    margin-right: 40px;
-    position: relative;
-    z-index: 1;
-  }
-  
-  #blog img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
-    display: block;
-    position: relative;
-    z-index: 1;
-  }
-  
-  #blog .blog-details {
-    width: 50%;
-  }
-  
-  #blog .blog-details a {
-    text-decoration: none;
-    font-size: 20px;
-    color: #000;
-    font-weight: 700;
-    position: relative;
-    transition: .3s;
-  }
-  
-  #blog .blog-details a::after {
-    content: "";
-    width: 100px;
-    height: 2px;
-    background-color: #000;
-    position: absolute;
-    top: 50%;
-    left: 110%;
-    transform: translateY(-50%);
-    margin-top: 0;
-    transition: .3s;
-  }
-  
-  #blog .blog-details a:hover {
-    color: #088178;
-  }
-  
-  #blog .blog-details a:hover:after {
-    background-color: #008178;
-  }
-  
-  #blog .blog-box h1 {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    font-size: 70px;
-    font-weight: 700;
-    color: #c9cbce;
-    z-index: 2;
+    margin-right: 0px;
+    margin-bottom: 30px;
   }
 
-  #pagination {
-    text-align: center;
+  #blog .blog-details {
+    width: 100%;
   }
-  
-  #pagination a {
-    font-size: 18px;
-    text-decoration: none;
-    color: white;
-    background-color: #088178;
-    padding: 10px 15px;
-    margin: 0 5px;
-    border-radius: 4px;
-    font-weight: 600;
-  }
-  
-  @media (max-width: 477px) {
-    #blog {
-      padding: 100px 20px 0 20px;
-    }
-  
-    #blog .blog-box {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    #blog .blog-img {
-      width: 100%;
-      margin-right: 0px;
-      margin-bottom: 30px;
-    }
-  
-    #blog .blog-details {
-      width: 100%;
-    }
-  }
+}
