@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useRef } from "react";
-import "../styles/blog.css";
+import "../../styles/blog.css";
 
-function Blog() {
+function BlogSecond() {
   const navbarRef = useRef(null);
 
   const openNavbar = () => {
@@ -63,7 +63,7 @@ function Blog() {
       <section id="blog">
         <div className="blog-box">
           <div className="blog-img">
-            <img src="/img/blog/b1.jpg" alt="" />
+            <img src="/img/blog/b4.jpg" alt="" />
           </div>
           <div className="blog-details">
             <h4>The Cotton-Jersey Zip-Up Hoodie</h4>
@@ -73,14 +73,12 @@ function Blog() {
             </p>
             <a href="#">CONTINUE READING</a>
           </div>
-          <h1>13/01</h1>
+          <h1>13/04</h1>
         </div>
-      </section>
 
-      <section id="blog" className="secondary">
         <div className="blog-box">
           <div className="blog-img">
-            <img src="/img/blog/b2.jpg" alt="" />
+            <img src="/img/blog/b5.jpg" alt="" />
           </div>
           <div className="blog-details">
             <h4>The Cotton-Jersey Zip-Up Hoodie</h4>
@@ -90,15 +88,32 @@ function Blog() {
             </p>
             <a href="#">CONTINUE READING</a>
           </div>
-          <h1>13/02</h1>
+          <h1>13/05</h1>
+        </div>
+
+        <div className="blog-box-last">
+          <div className="blog-img">
+            <img src="/img/blog/b7.jpg" alt="" />
+          </div>
+          <div className="blog-details">
+            <h4>The Cotton-Jersey Zip-Up Hoodie</h4>
+            <p>
+              Kickstarter man braid godard coloring book. Raclette waistcoat
+              selfies yr wolf chartreuse hexagon irony, godard…
+            </p>
+            <a href="#">CONTINUE READING</a>
+          </div>
+          <h1>13/06</h1>
         </div>
       </section>
 
       <section id="pagination" className="section-p1">
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">
-          <i className="fal fa-long-arrow-alt-right"></i>
+        <Link to="/blog">
+          <i className="fal fa-long-arrow-alt-left"></i>
+        </Link>
+        <Link to="/blog">1</Link>
+        <a href="#" className="active-page">
+          2
         </a>
       </section>
 
@@ -118,12 +133,9 @@ function Blog() {
 
       <footer className="section-p1">
         <div className="col">
-          <img
-            className="logo"
-            style={{ width: "150px" }}
-            src="/img/logo.png"
-            alt=""
-          />
+          <Link to="/" className="logo">
+            <img style={{ width: "150px" }} src="/img/logo.png" alt="" />
+          </Link>
           <h4>Contact</h4>
           <p>
             <strong>Address: </strong> Sejong University
@@ -179,4 +191,4 @@ function Blog() {
   );
 }
 
-export default Blog;
+export default BlogSecond;
