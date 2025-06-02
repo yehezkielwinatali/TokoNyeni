@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
-import Shop from "./pages/shop";
-import About from "./pages/about";
+import Shop from "./pages/shop"
+import Blog from "./pages/blog-pages/blog";
+import BlogSecond from "./pages/blog-pages/blog-second";
 import Contact from "./pages/contact";
 
 function Placeholder({ name }) {
@@ -17,8 +18,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/shop" element={<Shop />} />
-      <Route path="/blog" element={<Placeholder name="Blog" />} />
-      <Route path="/about" element={<About />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog-second" element={<BlogSecond />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/cart" element={<Placeholder name="Cart" />} />
     </Routes>
