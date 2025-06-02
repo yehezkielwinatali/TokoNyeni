@@ -1,8 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
-import Shop from "./pages/shop";
+import Shop from "./pages/shop"
 import Blog from "./pages/blog-pages/blog";
 import BlogSecond from "./pages/blog-pages/blog-second";
+import Contact from "./pages/contact";
 
 function Placeholder({ name }) {
   return (
@@ -19,8 +20,7 @@ function App() {
       <Route path="/shop" element={<Shop />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog-second" element={<BlogSecond />} />
-      <Route path="/about" element={<Placeholder name="About" />} />
-      <Route path="/contact" element={<Placeholder name="Contact" />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="/cart" element={<Placeholder name="Cart" />} />
     </Routes>
   );
