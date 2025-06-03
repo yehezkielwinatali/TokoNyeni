@@ -86,32 +86,31 @@
 #feature {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  gap: 20px 10px; 
 }
+
 #feature .fe-box {
-  width: 180px;
+  width: 160px;
+  height: 160px;
   text-align: center;
-  padding: 25px 15px;
+  padding: 0;
   box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
   border: 1px solid #cce7d0;
   border-radius: 4px;
-  margin: 15px 0;
-}
-
-#feature .fe-box:hover {
-  box-shadow: 10px 10px 54px rgba(54, 56, 56, 0.1);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #fff;
 }
 
 #feature .fe-box img {
-  width: 100%;
-}
-
-#feature .fe-box h6 {
-  display: inline-block;
-  padding: 6px 8px 6px 8px;
-  border-radius: 4px;
-  line-height: 1;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
 }
 
 #product1 {
@@ -225,13 +224,14 @@
 
 #sm-banner {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 41px;
 }
 
 #banner3 {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 0 80px;
 }
@@ -242,7 +242,7 @@
   justify-content: center;
   align-items: flex-start;
   background-image: url("img/banner/b17.jpg");
-  min-width: 660px;
+  min-width: 808.5px;
   height: 50vh;
   background-size: cover;
   background-position: center;
@@ -531,11 +531,11 @@ footer .copyright {
     width: 30%;
   }
 
-  #form-details{
+  #form-details {
     padding: 40px;
   }
 
-  #form-details form{
+  #form-details form {
     width: 50%;
   }
 }
@@ -575,6 +575,23 @@ footer .copyright {
     padding: 20px;
   }
 
+  #feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 10px;
+    justify-items: center;
+  }
+
+  #feature .fe-box {
+    width: 140px;
+    height: 140px;
+  }
+
+  #feature .fe-box:nth-child(5) {
+    grid-column: 1 / span 2;
+    justify-self: center;
+  }
+
   #feature .fe-box {
     width: 155px;
     margin: 0 0 15px 0;
@@ -589,12 +606,26 @@ footer .copyright {
     width: 100%;
   }
 
+  section#product1.section-p1 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #product1 .pro-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   #banner {
     height: 40vh;
   }
 
   #sm-banner {
+    flex-direction: column;
     gap: 20px;
+    padding: 20px;
   }
 
   #banner3 {
@@ -636,31 +667,31 @@ footer .copyright {
     justify-content: center;
     margin-bottom: 20px;
   }
-  
+
   footer .install {
     margin-left: 20px;
   }
-  
-  #contact-details{
+
+  #contact-details {
     flex-direction: column;
   }
 
-  #contact-details .details{
+  #contact-details .details {
     width: 100%;
     margin-bottom: 30px;
   }
 
-  #contact-details .map{
+  #contact-details .map {
     width: 100%;
   }
 
-  #form-details{
+  #form-details {
     margin: 10px;
-    padding: 30px 10px; 
+    padding: 30px 10px;
     flex-wrap: wrap;
   }
 
-  #form-details form{
+  #form-details form {
     width: 100%;
     margin-bottom: 30px;
   }
