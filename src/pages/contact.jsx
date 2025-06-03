@@ -1,7 +1,17 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import "../styles/contact.css";
 
 function Contact() {
+  const navbarRef = useRef(null);
+
+  const openNavbar = () => {
+    navbarRef.current.classList.add("active");
+  };
+  const closeNavbar = () => {
+    navbarRef.current.classList.remove("active");
+  };
+
   return (
     <>
       <section id="header">
@@ -9,7 +19,7 @@ function Contact() {
           <img src="/img/logo.png" alt="logo" style={{ width: "90px" }} />
         </Link>
         <div>
-          <ul id="navbar">
+          <ul id="navbar" ref={navbarRef}>
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -20,17 +30,16 @@ function Contact() {
               <Link to="/blog">Blog</Link>
             </li>
             <li>
-              <Link to="/about">About </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="active">Contact</Link>
+              <Link to="/contact" className="active">
+                Contact
+              </Link>
             </li>
             <li id="lg-bag">
               <Link to="/cart" id="cart-icon">
                 <i className="fa fa-shopping-cart" aria-hidden="true"></i>
               </Link>
             </li>
-            <a href="#" id="close">
+            <a href="#" id="close" onClick={closeNavbar}>
               <i className="far fa-times"></i>
             </a>
           </ul>
@@ -39,7 +48,7 @@ function Contact() {
           <Link to="/cart" id="cart-icon">
             <i className="fa fa-shopping-cart" aria-hidden="true"></i>
           </Link>
-          <i id="bar" className="fas fa-outdent"></i>
+          <i id="bar" className="fas fa-outdent" onClick={openNavbar}></i>
         </div>
       </section>
 
@@ -49,32 +58,40 @@ function Contact() {
       </section>
 
       <section id="contact-details" className="section-p1">
-        <div class="details">
+        <div className="details">
           <span>GET IN TOUCH</span>
           <h2> Visit one of our agency locations or contact us today</h2>
           <h3>Head Office</h3>
           <div>
             <li>
-              <i class="fal fa-map"></i>
+              <i className="fal fa-map"></i>
               <p>56 Glassford Street Glasgow G1 1UL New York</p>
             </li>
             <li>
-              <i class="fal fa-envelope"></i>
+              <i className="fal fa-envelope"></i>
               <p>contact@example.com</p>
             </li>
             <li>
-              <i class="fal fa-phone-alt"></i>
+              <i className="fal fa-phone-alt"></i>
               <p>contact@example.com</p>
             </li>
             <li>
-              <i class="fal fa-clock"></i>
+              <i className="fal fa-clock"></i>
               <p>Monday to Saturday: 9.00am to 16.00pm</p>
             </li>
           </div>
         </div>
 
-        <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.3696783919905!2d112.6823587!3d-7.299989299999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fc44d5ec05f1%3A0x7994a9cbdfaa118d!2sJl.%20Bintang%20Graha%20Famili%20IV%20No.211%2C%20Babatan%2C%20Kec.%20Wiyung%2C%20Surabaya%2C%20Jawa%20Timur%2060227%2C%20Indonesia!5e0!3m2!1sen!2skr!4v1748869144149!5m2!1sen!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div className="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.2509566453436!2d127.07493969999999!3d37.5491508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca4d0720eecc1%3A0x1a7ad975c6b5e4eb!2sSejong%20University!5e0!3m2!1sen!2skr!4v1748940456351!5m2!1sen!2skr"
+            width="600"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </section>
 
@@ -85,22 +102,40 @@ function Contact() {
           <input type="text" placeholder="Your Name" />
           <input type="text" placeholder="E-mail" />
           <input type="text" placeholder="Subject" />
-          <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Your Message"
+          ></textarea>
           <button>Submit</button>
         </form>
 
-        <div class="people">
+        <div className="people">
           <div>
             <img src="img/people/1.png" alt="" />
-            <p><span>John Doe</span> Senior Marketing Manager <br> Phone: + 000 123 000 77 88</br> <br> Email: contact@example.com</br></p>
+            <p>
+              <span>John Doe</span> Senior Marketing Manager
+              <br /> Phone: + 000 123 000 77 88
+              <br /> Email: contact@example.com
+            </p>
           </div>
           <div>
             <img src="img/people/2.png" alt="" />
-            <p><span>William Smith</span> Senior Marketing Manager <br> Phone: + 000 123 000 77 88</br> <br> Email: contact@example.com</br></p>
+            <p>
+              <span>William Smith</span> Senior Marketing Manager
+              <br /> Phone: + 000 123 000 77 88
+              <br /> Email: contact@example.com
+            </p>
           </div>
           <div>
             <img src="img/people/3.png" alt="" />
-            <p><span>Emma Stone</span> Senior Marketing Manager <br> Phone: + 000 123 000 77 88</br> <br> Email: contact@example.com</br></p>
+            <p>
+              <span>Emma Stone</span> Senior Marketing Manager
+              <br /> Phone: + 000 123 000 77 88
+              <br /> Email: contact@example.com
+            </p>
           </div>
         </div>
       </section>
