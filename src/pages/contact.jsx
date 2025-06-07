@@ -34,11 +34,6 @@ function Contact() {
                 Contact
               </Link>
             </li>
-            <li id="lg-bag">
-              <Link to="/cart" id="cart-icon">
-                <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-              </Link>
-            </li>
             <a href="#" id="close" onClick={closeNavbar}>
               <i className="far fa-times"></i>
             </a>

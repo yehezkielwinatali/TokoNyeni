@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
-import Shop from "./pages/shop"
+import Shop from "./pages/shop";
 import Blog from "./pages/blog-pages/blog";
 import BlogSecond from "./pages/blog-pages/blog-second";
 import Contact from "./pages/contact";
@@ -22,6 +22,7 @@ function App() {
       <Route path="/blog-second" element={<BlogSecond />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/cart" element={<Placeholder name="Cart" />} />
+      <Route path="*" element={<Placeholder name="404 Not Found" />} />
     </Routes>
   );
 }

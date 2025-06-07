@@ -23,11 +23,6 @@ function Shop() {
           <li>
             <Link to="/contact">Contact</Link>
           </li>
-          <li>
-            <Link to="/cart" id="cart-icon">
-              <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-            </Link>
-          </li>
         </ul>
       </section>
 
