@@ -34,20 +34,12 @@ function Home() {
             <li>
               <Link to="/contact">Contact</Link>
             </li>
-            <li id="lg-bag">
-              <Link to="/cart" id="cart-icon">
-                <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-              </Link>
-            </li>
             <a href="#" id="close" onClick={closeNavbar}>
               <i className="far fa-times"></i>
             </a>
           </ul>
         </div>
         <div id="mobile">
-          <Link to="/cart" id="cart-icon">
-            <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-          </Link>
           <i id="bar" className="fas fa-outdent" onClick={openNavbar}></i>
         </div>
       </section>
