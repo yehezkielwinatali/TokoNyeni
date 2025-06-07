@@ -1,37 +1,59 @@
 import { Link } from "react-router-dom";
+import { useRef } from "react"; // <-- Add this line
 import "../styles/shop.css";
 
 function Shop() {
+  const navbarRef = useRef(null);
+
+  const openNavbar = () => {
+    navbarRef.current.classList.add("active");
+  };
+  const closeNavbar = () => {
+    navbarRef.current.classList.remove("active");
+  };
+
   return (
     <>
       <section id="header">
-        <Link to="#" className="logo">
-          <img src="/img/logo.png" alt="logo" style={{ width: "90px" }} />
+        <Link to="/" className="logo">
+          <img style={{ width: "90px" }} src="/img/logo.png" alt="" />
         </Link>
-        <ul id="navbar">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/shop" className="active">
-              Shop
-            </Link>
-          </li>
-          <li>
-            <Link to="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link to="/cart" id="cart-icon">
-              <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-            </Link>
-          </li>
-        </ul>
+        <div>
+          <ul id="navbar" ref={navbarRef}>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/shop" className="active" >Shop</Link>
+            </li>
+            <li>
+              <Link to="/blog" >
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+            <a href="#" id="close" onClick={closeNavbar}>
+              <i className="far fa-times"></i>
+            </a>
+          </ul>
+        </div>
+        <div id="mobile">
+          <Link to="/cart" id="cart-icon">
+            <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+          </Link>
+          <i id="bar" className="fas fa-outdent" onClick={openNavbar}></i>
+        </div>
       </section>
 
-      <section>
+      <section id="page-header" className="blog-header">
+        <h2>#shopnow</h2>
+        <p>discover your new favorite outfit!</p>
+      </section>
+
+
+      <section id="product1">
         <div className="pro-container">
           {[...Array(8)].map((_, i) => (
             <div className="pro" key={`f${i}`}>
@@ -78,9 +100,6 @@ function Shop() {
                   }
                 </h4>
               </div>
-              <a href="#">
-                <i className="fal fa-shopping-cart cart"></i>
-              </a>
             </div>
           ))}
         </div>
@@ -138,6 +157,7 @@ function Shop() {
           ))}
         </div>
       </section>
+      
 
       <section id="newsletter" className="section-p1 section-m1">
         <div className="newstext">
@@ -163,7 +183,7 @@ function Shop() {
           />
           <h4>Contact</h4>
           <p>
-            <strong>Address: </strong> Graha Family Block O/211
+            <strong>Address: </strong> Sejong University
           </p>
           <p>
             <strong>Phone: </strong> +82 9242 3343 / +62 8345 2423
