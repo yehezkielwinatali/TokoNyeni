@@ -41,7 +41,6 @@ function Blog() {
         </div>
         <div id="mobile">
           <Link to="/cart" id="cart-icon">
-            <i className="fa fa-shopping-cart" aria-hidden="true"></i>
           </Link>
           <i id="bar" className="fas fa-outdent" onClick={openNavbar}></i>
         </div>
